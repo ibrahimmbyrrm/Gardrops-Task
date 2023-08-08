@@ -12,7 +12,7 @@ final class ViewController: UIViewController {
     private let backgroundImage : UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "noti.png")
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleAspectFill
         return imageView
     }()
     private let nextButton : UIButton = {
@@ -165,7 +165,7 @@ final class ViewController: UIViewController {
         NSLayoutConstraint.activate([
             backgroundImage.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
             backgroundImage.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-            backgroundImage.heightAnchor.constraint(equalToConstant: 260),
+            backgroundImage.heightAnchor.constraint(equalToConstant: 220),
             backgroundImage.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
         ])
     }

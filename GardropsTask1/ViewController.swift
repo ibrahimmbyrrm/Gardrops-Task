@@ -50,7 +50,6 @@ final class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
         execute()
     }
     
@@ -71,7 +70,7 @@ final class ViewController: UIViewController {
         setupAdvantagesStackViewConstraints()
         
         setupPreferenceLabelConstraints()
-        
+        //Setup button's gradient background.
         nextButton.applyGradient(colors: [UIColor.red.cgColor,UIColor.purple.cgColor])
     }
     

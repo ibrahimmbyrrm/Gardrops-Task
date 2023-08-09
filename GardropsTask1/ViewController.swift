@@ -47,7 +47,7 @@ final class ViewController: UIViewController {
         label.textColor = .black
         return label
     }()
-    
+    //MARK: - Initial Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         execute()
@@ -73,17 +73,9 @@ final class ViewController: UIViewController {
         //Setup button's gradient background.
         nextButton.applyGradient(colors: [UIColor.red.cgColor,UIColor.purple.cgColor])
     }
-    
+    //MARK: - Selector Functions
     @objc func nextButtonTapped() {
         print("İleri butonuna basıldı")
-    }
-    
-    //Set all objects to view.
-    private func setSubviews() {
-        [backgroundImage,nextButton,titleStackView,advantagesStackView,preferenceLabel].forEach { v in
-            v.translatesAutoresizingMaskIntoConstraints = false
-            view.addSubview(v)
-        }
     }
     //MARK: - StackView ArrangedSubviews Functions
     private func setupTitleStackViewSubviews() {
@@ -124,6 +116,13 @@ final class ViewController: UIViewController {
         }
     }
     //MARK: - Layout Functions
+    private func setSubviews() {
+        [backgroundImage,nextButton,titleStackView,advantagesStackView,preferenceLabel].forEach { v in
+            v.translatesAutoresizingMaskIntoConstraints = false
+            view.addSubview(v)
+        }
+    }
+    
     private func setupTitleStackViewConstraints() {
         NSLayoutConstraint.activate([
             titleStackView.topAnchor.constraint(equalTo: backgroundImage.bottomAnchor),
